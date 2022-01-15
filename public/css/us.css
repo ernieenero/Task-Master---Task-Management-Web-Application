@@ -1,0 +1,130 @@
+/* US.html PART */
+div.page-content {
+    display: block;
+    position: relative;
+    top: 10vh;
+    text-align: center;
+}
+div.Deck {
+    position: relative;
+    top: 70px;
+    margin: 15px 15px 1px 15px;
+    align-items: center;
+    animation: TransIn 0.5s;
+}
+
+div.card {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(207, 192, 153, 0.7);
+    margin: 30px auto;
+    width: 30vw;
+    height: 400px;
+    border: 2px solid;
+    border-radius: 10px;
+    padding: 20px 30px;
+    box-shadow: 2px 4px rgba(115, 114, 114, 0.3);
+    text-align: left;
+    cursor: pointer;
+}
+
+div.card img {
+    text-align: center;
+}
+div.card > * {
+    position: relative;
+    top: 25%;
+    padding: 10px 25px;
+    margin: auto 10px;
+}
+
+div.card:hover {
+    box-shadow: 6px 10px rgba(115, 114, 114, 0.3);
+    transition: 1s;
+}
+@media (max-width: 1200px) {
+    div.Deck {
+        padding: 10px 2%;
+    }
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0.4;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.prev,
+.next {
+    position: absolute;
+    cursor: pointer;
+    width: auto;
+    top: 40%;
+    margin: 10px 15px;
+    padding: 10px;
+    font-size: x-large;
+    font-weight: bolder;
+    transition: 0.3s ease-in-out;
+    border-radius: 5px;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: white;
+}
+
+.next {
+    position: absolute;
+    right: 30%;
+}
+.prev {
+    position: absolute;
+    left: 30%;
+}
+
+@media (max-width: 1200px) {
+    .next {
+        position: absolute;
+        right: 20%;
+    }
+    .prev {
+        position: absolute;
+        left: 20%;
+    }
+    div.card > * {
+        top: 10%;
+    }
+}
+div.radio {
+    position: relative;
+    top: 70px;
+    justify-content: center;
+    margin: 10px 15px;
+}
+.circle {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.circle:hover {
+    background-color: gray;
+}
+
+.active {
+    background-color: gray;
+}
+/* Us.html Part */
