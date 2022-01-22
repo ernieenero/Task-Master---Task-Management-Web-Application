@@ -15,4 +15,5 @@
     <li>Jessel Quijano</li>
     <li>Angelica Castillo</li>
     <li>Zander Tabelona</li>
+    <li>Roland Balderas</li>
     </ul>
