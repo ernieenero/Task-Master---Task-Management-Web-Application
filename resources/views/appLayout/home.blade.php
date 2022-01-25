@@ -1,4 +1,4 @@
-@extends('appLayout.base')
+@extends('templates.base')
 
 @section('links')
 <link rel="stylesheet" href="{{ asset('/css/base.css') }}">

@@ -1,4 +1,5 @@
-@extends('appLayout.base')
+@extends('templates.base')
+@method('PUT')
 @section('cssLinks')
     <link rel="stylesheet" href="{{ asset('/css/about.css') }}">
 @endsection

@@ -1,4 +1,4 @@
-@extends('appLayout.base')
+@extends('templates.base')
 @section('cssLinks')
     
     <link rel="stylesheet" href="{{ asset('/css/calendar.css') }}">

@@ -19,6 +19,6 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\userController;
 
 Route::resource('/', 'userController');
-Route::get('/about', [userController::class, 'about']);
-Route::get('/us', [userController::class, 'us']);
-Route::get('/login', [userController::class, 'login']);
+Route::get('/about', [userController::class, 'about'])->name('about');
+Route::get('/us', [userController::class, 'us'])->name('us');
+Route::get('/login', [userController::class, 'login'])->name('login');
