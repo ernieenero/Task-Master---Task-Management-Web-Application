@@ -27,6 +27,7 @@ form .left-col {
     display: flex;
     flex-direction: column;
     width: 50%;
+    text-align: center;
 }
 input,
 select {
@@ -38,7 +39,7 @@ select {
 
 input[name="submit"] {
     position: absolute;
-    top: 530px;
+    top: 350px;
     border: 1px solid black;
     border-radius: 10px;
     background-color: #e5e5e5;

@@ -4,8 +4,8 @@
 @endsection
 
 @section('content')
-<section id="main">
-        <div class="form-page">
+<div class="content">
+<div class="form-page">
             <h1>Welcome</h1>
             <form action="/" method="post">
                 {{csrf_field()}}
@@ -35,6 +35,7 @@
             </form>
             
         </div>
-   </section>
+</div>
+        
 
 @endsection

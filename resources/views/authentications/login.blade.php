@@ -4,9 +4,9 @@
 @endsection
 
 @section('content')
-<section id="main">
-        <div class="form-page">
-            <form action="login.html" method="post">
+<div class="content">
+    <div class="form-page"> 
+        <form action="login.html" method="post">
                 <label for="username">Username </label>
                 <input type="text" name="username" placeholder="Enter Username">
                 <label for="password">Password </label>
@@ -14,5 +14,6 @@
                 <input class="login-btn" type="submit" name='submit' value="Login">
             </form>
         </div>
-   </section>
+</div>
+        
 @endsection
