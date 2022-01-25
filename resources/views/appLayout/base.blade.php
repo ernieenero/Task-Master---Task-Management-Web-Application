@@ -15,11 +15,11 @@
       </label>
       <a href="index.html"><img class="logo" src="{{ asset('/images/temp-logo.png') }}" alt="logo"></a>
       <ul>
-        <li><a href="/login" class="nav">Login</a></li>
         <li><a class="nav" href="/">Home</a></li>
         <li><a class="nav" href="/about">About</a></li>
         <li><a class="nav" href="/us">Us</a></li>
-        <li><a href="/signup" class="nav">Signup</a></li>
+        <li><a href="/login" class="nav">Login</a></li>
+
       </ul>
     </nav>
     

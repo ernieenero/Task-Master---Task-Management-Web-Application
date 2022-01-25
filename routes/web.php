@@ -22,4 +22,3 @@ Route::resource('/', 'userController');
 Route::get('/about', [userController::class, 'about']);
 Route::get('/us', [userController::class, 'us']);
 Route::get('/login', [userController::class, 'login']);
-Route::get('/signup', [userController::class, 'signup']);
