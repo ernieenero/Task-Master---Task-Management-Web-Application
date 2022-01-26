@@ -13,9 +13,17 @@
       <label class='checkmo'for="check">
         <i class="fa fa-bars"></i>
       </label>
-      <a href="index.html"><img class="logo" src="{{ asset('/images/temp-logo.png') }}" alt="logo"></a>
+      @if(Auth::user() == null)
+        <a href="{{route('index')}}"><img class="logo" src="{{ asset('/images/temp-logo.png') }}" alt="logo"></a>
+        @else
+        <a href="{{route('subject-list')}}"><img class="logo" src="{{ asset('/images/temp-logo.png') }}" alt="logo"></a>
+        @endif
       <ul>
-        <li><a class="nav" href="{{route('index')}}">Home</a></li>
+        @if(Auth::user() == null)
+          <li><a class="nav" href="{{route('index')}}">Home</a></li>
+        @else
+          <li><a class="nav" href="{{route('subject-list')}}">Home</a></li>
+        @endif
         <li><a class="nav" href="{{route('about')}}">About</a></li>
         <li><a class="nav" href="{{route('us')}}">Us</a></li>
         @if(Auth::user() == null)

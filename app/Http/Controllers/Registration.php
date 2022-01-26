@@ -75,7 +75,9 @@ class Registration extends Controller
      */
     public function show($id)
     {
-        //
+        $user = User::find($id);
+        
+        return view('appLayout/user-profile', compact('user'));
     }
 
     /**
@@ -86,7 +88,9 @@ class Registration extends Controller
      */
     public function edit($id)
     {
-        //
+        $user = User::find($id);
+
+        return view('appLayout/update-profile', compact('user'));
     }
 
     /**
@@ -97,8 +101,16 @@ class Registration extends Controller
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
-    {
-        //
+    {   
+        $user = User::find($id);
+        $data = $request->all();
+
+        $user->name = $data['name'];
+        $user->email = $data['email'];
+
+        $user->save();
+
+        return redirect()->route('profile', ['id' => $id]);
     }
 
     /**

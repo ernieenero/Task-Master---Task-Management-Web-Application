@@ -1,0 +1,16 @@
+#user__profile {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    text-align: center;
+}
+.user__card {
+    display: flex;
+    flex-direction: column;
+}
+#user__name::before {
+    content: "Username: ";
+}
+#user__email::before {
+    content: "Email: ";
+}
