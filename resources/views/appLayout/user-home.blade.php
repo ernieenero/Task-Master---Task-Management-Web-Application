@@ -67,7 +67,7 @@
               <h4>Request Sender</h4>
               <h6>Request Description</h6>
             </div>
-            
+      
             <div class="request-option">
               <a  href=""><img class="option" src="{{ asset('/images/check.png') }}" alt=""></a>
               <a href=""><img class="option" src="{{ asset('/images/delete.png') }}" alt=""></a>

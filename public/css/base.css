@@ -74,6 +74,8 @@ a img.logo {
     }
 }
 nav ul {
+    display: flex;
+    flex-direction: row;
     float: right;
     margin-right: 40px;
 }

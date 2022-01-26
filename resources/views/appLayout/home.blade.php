@@ -11,6 +11,7 @@
     <h1>Think of Design Here</h1>
     </div>
     <div class="left-col-base">
+        
         <a class="started__button" href="{{route('create')}}">Let's Get Started!</a>
         
     </div>

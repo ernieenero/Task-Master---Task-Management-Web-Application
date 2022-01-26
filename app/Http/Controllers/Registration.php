@@ -2,10 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use App\Models\User;
 
-class userController extends Controller
+use App\Http\Controllers\Controller;
+use App\Models\User;
+use App\Providers\RouteServiceProvider;
+use Illuminate\Auth\Events\Registered;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Validation\Rules;
+
+class Registration extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -35,13 +42,28 @@ class userController extends Controller
      */
     public function store(Request $request)
     {
+        $validated = $request->validate([
+            'name'=>['required'],
+            'password'=>['required'],
+            'email'=>['unique:users', 'required']
+        ]);
+
         $data = $request->all();
 
         unset($data['submit']);
+        
 
-        User::create($data);
+        $user = User::create([
+            'name' => $data['name'],
+            'password' => Hash::make($data['password']),
+            'email' =>  $data['email'],
+        ]);
 
-        return redirect('/');
+        event(new Registered($user));
+
+        Auth::login($user);
+        return redirect(RouteServiceProvider::HOME);
+
 
     }
 
@@ -109,4 +131,5 @@ class userController extends Controller
     {
         return view('authentications/signup');
     }
+
 }

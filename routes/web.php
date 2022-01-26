@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\Registration;
+use App\Http\Controllers\Authentication;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,12 +14,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-use App\Http\Controllers\userController;
+Route::resource('/', 'Registration');
 
-Route::resource('/', 'userController');
-Route::get('/about', [userController::class, 'about'])->name('about');
-Route::get('/us', [userController::class, 'us'])->name('us');
-Route::get('/login', [userController::class, 'login'])->name('login');
+Route::get('/about', [Registration::class, 'about'])->name('about');
+Route::get('/us', [Registration::class, 'us'])->name('us');
+
+
+Route::get('/login', [Authentication::class, 'create'])->middleware('guest')->name('login.create');
+Route::post('/login', [Authentication::class, 'store'])->name('login.store');
+Route::post('/login/destroy', [Authentication::class, 'destroy'])->middleware('auth')->name('login.destroy');
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth'])->name('dashboard');
+
+require __DIR__.'/auth.php';
