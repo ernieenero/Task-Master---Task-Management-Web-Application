@@ -13,7 +13,7 @@ class TaskTableTable extends Migration
      */
     public function up()
     {
-        Schema::create('task_table', function (Blueprint $table) {
+        Schema::create('tasks', function (Blueprint $table) {
             $table->id('task_id');
             $table->unsignedBigInteger('subject_id');
             $table->string('task_detail');
@@ -21,7 +21,7 @@ class TaskTableTable extends Migration
             $table->date('task_deadline');
             $table->timestamps();
 
-            $table->foreign('subject_id')->references('subject_id')->on('subjects_table')->onDelete('cascade');
+            $table->foreign('subject_id')->references('subject_id')->on('subjects')->onDelete('cascade');
         });
     }
 
