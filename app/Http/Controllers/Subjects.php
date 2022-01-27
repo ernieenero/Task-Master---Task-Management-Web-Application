@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Subject;
+use App\Models\User;
 
-class userController extends Controller
+class Subjects extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,7 +15,7 @@ class userController extends Controller
      */
     public function index()
     {
-        return view('appLayout/home');
+        return view('appLayout/subject-list');
     }
 
     /**
@@ -21,9 +23,12 @@ class userController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($id)
     {
-        //
+        $user = User::findOrFail($id);
+
+
+        return view('appLayout/subject-list', compact('user'));  
     }
 
     /**
@@ -32,9 +37,24 @@ class userController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, $id)
     {
-        //
+        $validated = $request->validate([
+            'subject_name'=>['required'],
+            'subject_detail'=>['required'],
+        ]);
+        
+        $user = User::find($id);
+
+        $data = $request->all();
+
+        unset($data['submit']);
+
+        $subject = new Subject(['subject_name'=>$data['subject_name'], 'subject_detail'=>$data['subject_detail']]);
+        
+        $user->subjects()->save($subject);
+
+        return redirect()->route('user-home', $user['user_id']);
     }
 
     /**
@@ -80,25 +100,5 @@ class userController extends Controller
     public function destroy($id)
     {
         //
-    }
-
-    public function about()
-    {
-        return view('appLayout/about');
-    }
-
-    public function us()
-    {
-        return view('appLayout/us');
-    }
-
-    public function login()
-    {
-        return view('authentications/login');
-    }
-
-    public function signup()
-    {
-        return view('authentications/signup');
     }
 }

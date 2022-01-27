@@ -17,10 +17,12 @@ class User extends Authenticatable
      *
      * @var array<int, string>
      */
+
+    protected $primaryKey = 'user_id';
     protected $fillable = [
         'name',
-        'email',
         'password',
+        'email',
     ];
 
     /**
@@ -41,4 +43,8 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function subjects(){
+        return $this->hasMany('App\Models\Subject', 'user_id');
+    }
 }

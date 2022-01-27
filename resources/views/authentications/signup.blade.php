@@ -1,24 +1,28 @@
-@extends('appLayout.base')
+@extends('templates.formTemp')
 @section('cssLinks')
-    <link rel="stylesheet" href="{{ asset('css/login.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/signup.css') }}">
 @endsection
 
 @section('content')
-<section id="main">
-        <div class="form-page">
-            <form action="login.html" method="post">
-                <label for="name">Name </label>
-                <input type="text" name="name" placeholder="Enter Name">
-                <label for="username">Username </label>
-                <input type="text" name="username" placeholder="Enter Username">
-                <label for="password">Password </label>
-                <input type="text" name="password" placeholder="Enter Password">
-                <label for="birthdate">Birthdate </label>
-                <input type="date" name="birthdate" placeholder="Enter Username">
+<div class="content">
+    <div class="form-page">
+            <h1 >Welcome</h1>
+            <form action="/" method="post">
+                {{csrf_field()}}
+                <div class="right-col">
+                <input type="text" name="name" placeholder="Enter Name" required>
+                <input type="email" name="email" placeholder="Enter Email" required>
+                <input type="password" name="password" placeholder="Enter Password" required>
+                </div>
                 
+
                 <input class="login-btn" type="submit" name='submit' value="Signup">
+                
             </form>
+            <a href="{{route('login.create')}}">Already Have an Account?</a>
+         
         </div>
-   </section>
+        
+</div>
 
 @endsection
