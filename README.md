@@ -6,7 +6,7 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
-<h1>Webdev Final Project Todo List</h1>
+<h1>Webdev Final Project Task Master</h1>
     <ul>
     <h3>Members:</h3>
     <li>Ernesto Enero</li>
