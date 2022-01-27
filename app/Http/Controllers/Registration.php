@@ -62,7 +62,7 @@ class Registration extends Controller
         event(new Registered($user));
 
         Auth::login($user);
-        return redirect(RouteServiceProvider::HOME);
+        return redirect(route('user-home', $user->user_id));
 
 
     }

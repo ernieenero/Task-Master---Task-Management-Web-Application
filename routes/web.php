@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Registration;
 use App\Http\Controllers\Authentication;
+use App\Http\Controllers\Subjects;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,23 +18,17 @@ use App\Http\Controllers\Authentication;
 Route::resource('/', 'Registration');
 
 Route::get('/create', [Registration::class, 'create'])->middleware('guest')->name('create');
-
 Route::get('/task_master/{id}', [Registration::class, 'show'])->name('profile');
-
 Route::get('/about', [Registration::class, 'about'])->name('about');
-
 Route::get('/us', [Registration::class, 'us'])->name('us');
 Route::get('/task_master/edit/{id}', [Registration::class, 'edit'])->name('edit');
 Route::post('/task_master/edit/{id}', [Registration::class, 'update'])->name('update');
-
 
 
 Route::get('/login', [Authentication::class, 'create'])->middleware('guest')->name('login.create');
 Route::post('/login', [Authentication::class, 'store'])->name('login.store');
 Route::post('/login/destroy', [Authentication::class, 'destroy'])->middleware('auth')->name('login.destroy');
 
-Route::get('/task-master', function () {
-    return view('appLayout/subject-list');
-})->middleware(['auth'])->name('subject-list');
-
+Route::get('/task-master/{id}', [Subjects::class, 'create'])->middleware(['auth'])->name('user-home');
+Route::post('/task-master/{id}', [Subjects::class, 'store'])->middleware(['auth'])->name('subject.store');
 require __DIR__.'/auth.php';

@@ -16,13 +16,13 @@
       @if(Auth::user() == null)
         <a href="{{route('index')}}"><img class="logo" src="{{ asset('/images/temp-logo.png') }}" alt="logo"></a>
         @else
-        <a href="{{route('subject-list')}}"><img class="logo" src="{{ asset('/images/temp-logo.png') }}" alt="logo"></a>
+        <a href="{{route('user-home', Auth::user()->user_id)}}"><img class="logo" src="{{ asset('/images/temp-logo.png') }}" alt="logo"></a>
         @endif
       <ul>
         @if(Auth::user() == null)
           <li><a class="nav" href="{{route('index')}}">Home</a></li>
         @else
-          <li><a class="nav" href="{{route('subject-list')}}">Home</a></li>
+          <li><a class="nav" href="{{route('user-home', Auth::user()->user_id)}}">Home</a></li>
         @endif
         <li><a class="nav" href="{{route('about')}}">About</a></li>
         <li><a class="nav" href="{{route('us')}}">Us</a></li>

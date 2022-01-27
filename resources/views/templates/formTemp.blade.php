@@ -32,7 +32,7 @@
       @if(Auth::user() == null)
         <a href="{{route('index')}}"><img class="logo" src="{{ asset('/images/temp-logo.png') }}" alt="logo"></a>
       @else
-        <a href="{{route('subject-list')}}"><img class="logo" src="{{ asset('/images/temp-logo.png') }}" alt="logo"></a>
+        <a href="{{route('user-home')}}"><img class="logo" src="{{ asset('/images/temp-logo.png') }}" alt="logo"></a>
       @endif
       <a href="{{route('index')}}" class="cancel__button">Cancel</a>
     </nav>

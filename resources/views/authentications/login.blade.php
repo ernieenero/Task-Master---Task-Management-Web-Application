@@ -6,14 +6,15 @@
 @section('content')
 <div class="content">
     <div class="form-page"> 
-   <form action="/login" method='post'>
+
+   <form action="{{route('login.store')}}" method='post'>
         {{csrf_field()}}
         <label for="email">Email </label>
         <input type="text" name="email" placeholder="Enter Email">
         <label for="password">Password </label>
         <input type="password" name="password" placeholder="Enter Password">
 
-        <input class="login-btn" type="submit" name='submit' value="Signup">
+        <input class="login-btn" type="submit" name='submit' value="Login">
 
         
    </form>

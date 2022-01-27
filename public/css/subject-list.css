@@ -29,6 +29,7 @@ input[type="submit"] {
     background-color: #f2ca63;
     font-size: large;
     border-radius: 15px;
+    cursor: pointer;
 }
 a.user__profile__button {
     position: absolute;
@@ -71,4 +72,10 @@ a.edit__subject img,
 a.delete__subject img {
     margin: 10px 30px;
     height: 25px;
+}
+
+.subject__input[type="submit"]:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: white;
+    box-shadow: rgba(0, 0, 0, 0.2);
 }
