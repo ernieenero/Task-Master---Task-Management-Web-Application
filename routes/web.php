@@ -17,15 +17,15 @@ use App\Http\Controllers\Subjects;
 
 Route::resource('/', 'Registration');
 
-Route::get('/create', [Registration::class, 'create'])->middleware('guest')->name('create');
-Route::get('/task_master/{id}', [Registration::class, 'show'])->name('profile');
-Route::get('/about', [Registration::class, 'about'])->name('about');
-Route::get('/us', [Registration::class, 'us'])->name('us');
-Route::get('/task_master/edit/{id}', [Registration::class, 'edit'])->name('edit');
-Route::post('/task_master/edit/{id}', [Registration::class, 'update'])->name('update');
+Route::get('/create', [Registration::class, 'create'])->middleware(['guest'])->name('create');
+Route::get('/task_master/{id}', [Registration::class, 'show'])->middleware(['guest'])->name('profile');
+Route::get('/about', [Registration::class, 'about'])->middleware(['guest'])->name('about');
+Route::get('/us', [Registration::class, 'us'])->middleware(['guest'])->name('us');
+Route::get('/task_master/edit/{id}', [Registration::class, 'edit'])->middleware(['auth'])->name('edit');
+Route::post('/task_master/edit/{id}', [Registration::class, 'update'])->middleware(['auth'])->name('update');
 
 
-Route::get('/login', [Authentication::class, 'create'])->middleware('guest')->name('login.create');
+Route::get('/login', [Authentication::class, 'create'])->middleware(['guest'])->name('login.create');
 Route::post('/login', [Authentication::class, 'store'])->name('login.store');
 Route::post('/login/destroy', [Authentication::class, 'destroy'])->middleware('auth')->name('login.destroy');
 
