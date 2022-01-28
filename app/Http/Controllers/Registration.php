@@ -102,9 +102,17 @@ class Registration extends Controller
      */
     public function update(Request $request, $id)
     {   
+        $validated = $request->validate([
+            'name'=>['required'],
+            'email'=>['required']
+        ]);
         $user = User::find($id);
         $data = $request->all();
 
+        $subok = User::where('user_id', '!=', $id)->where('email','=', $data['email'])->first();
+        if($subok){
+            return redirect()->route('edit', ['id' => $id])->withErrors(['edit error'=>'Must be unique Email']);
+        }
         $user->name = $data['name'];
         $user->email = $data['email'];
 

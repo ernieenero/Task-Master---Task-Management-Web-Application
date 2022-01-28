@@ -26,7 +26,6 @@ class Authentication extends Controller
             'email' => ['required', 'email'],
             'password' => ['required'],
         ]);
-        $error_message = 'Incorrect Email or Password.';
         $user = $credentials['email'];
         $user = User::where('email', $user)->first();
 
@@ -35,7 +34,7 @@ class Authentication extends Controller
 
             return redirect(route('user-home', $user->user_id));
         }
-        return redirect()->route('login.create');
+        return redirect()->route('login.create')->withErrors(['login_error'=>'Incorrect Email or Password']);
     }
         
 

@@ -34,7 +34,13 @@
       @else
         <a href="{{route('user-home', Auth::user()->user_id)}}"><img class="logo" src="{{ asset('/images/temp-logo.png') }}" alt="logo"></a>
       @endif
+
+      @if(Auth::user() == null)
       <a href="{{route('index')}}" class="cancel__button">Cancel</a>
+      @else
+      <a href="{{route('user-home', Auth::user()->user_id)}}" class="cancel__button">Cancel</a>
+      @endif
+      
     </nav>
     
     @yield('content')

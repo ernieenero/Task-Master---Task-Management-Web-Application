@@ -6,7 +6,17 @@
 @section('content')
 <div class="content">
     <div class="form-page">
-            <h1 >Welcome</h1>
+            @if ($errors->any())
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li style="color:red;">{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
+
+            <h1 class="form__title" >Welcome</h1>
             <form action="/" method="post">
                 {{csrf_field()}}
                 <div class="right-col">

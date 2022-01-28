@@ -16,6 +16,7 @@ form.subject__form {
     margin: 10px;
     background-color: #c4c4c4;
     border-radius: 20px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
 }
 input.subject__input {
     margin: 10px 15px;
@@ -53,12 +54,12 @@ img.profile {
     margin: 10px auto;
     padding: 10px 15px;
     line-height: 2;
-    background-color: white;
+    background-image: linear-gradient(60deg, gray, white, gray);
     border-radius: 15px;
     justify-content: center;
     text-align: center;
     align-items: center;
-    box-shadow: 2px 3px rgba(0, 0, 0, 0.2);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.9);
 }
 .subject__name {
     font-size: x-large;
@@ -74,14 +75,15 @@ a.delete__subject img {
     padding: 2px 5px;
     height: 30px;
     border-radius: 5px;
+    transition: 0.2s;
 }
 a.edit__subject img:hover,
 a.delete__subject img:hover {
-    background-image: linear-gradient(60deg, gray, white, gray);
+    background-color: rgba(255, 255, 255, 0.9);
     padding: 3px 6px;
 }
 .subject__input[type="submit"]:hover {
     background-color: rgba(0, 0, 0, 0.2);
     color: white;
-    box-shadow: rgba(0, 0, 0, 0.2);
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.9);
 }

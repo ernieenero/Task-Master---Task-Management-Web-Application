@@ -10,10 +10,6 @@ div.form-page {
     box-shadow: 2px 5px rgba(0, 0, 0, 0.2);
     align-items: center;
 }
-div.form-page > * {
-    margin: 20px 10px;
-}
-
 form {
     display: flex;
     flex-direction: column;
@@ -24,8 +20,6 @@ form {
     padding: 10px;
 }
 input[name="submit"] {
-    position: absolute;
-    top: 240px;
     border: 1px solid black;
     width: 80px;
     border-radius: 15px;
@@ -55,4 +49,7 @@ hr {
     border-right: none;
     border-left: none;
     border-bottom: none;
+}
+.title__login {
+    margin-top: 15px;
 }

@@ -1,6 +1,6 @@
 div.form-page {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     border: 1px solid black;
     border-radius: 20px;
     width: 60%;
@@ -9,21 +9,22 @@ div.form-page {
     background-color: rgba(187, 187, 187, 0.46);
     box-shadow: 2px 5px rgba(0, 0, 0, 0.2);
     justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 form {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     width: 100%;
     justify-content: center;
     align-items: center;
-    margin: 20px;
+    margin: 10px 15px;
     padding: 10px;
 }
 
-form .right-col,
-form .left-col {
-    margin: 10px 15px;
+form .right-col {
+    margin: 5px 15px;
     padding: 5px 7px;
     display: flex;
     flex-direction: column;
@@ -39,8 +40,6 @@ select {
 }
 
 input[name="submit"] {
-    position: absolute;
-    top: 300px;
     border: 1px solid black;
     border-radius: 10px;
     background-color: #e5e5e5;
@@ -53,4 +52,7 @@ input[name="submit"]:hover {
     background-color: gray;
     color: rgba(0, 0, 0, 1);
     box-shadow: 2px 3px rgba(0, 0, 0, 0.2);
+}
+.form__title {
+    margin-top: 20px;
 }

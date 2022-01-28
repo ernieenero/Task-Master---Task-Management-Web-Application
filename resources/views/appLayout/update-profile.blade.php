@@ -19,6 +19,15 @@
 @section('content')
 <div class="content">
     <div class="form-page">
+            @if($errors->any())
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li style="color:red;">{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
             <h1 >Edit Profile</h1>
             <form class="edit" action="{{route('update', [Auth::user()->user_id])}}" method="post">
                 {{csrf_field()}}
