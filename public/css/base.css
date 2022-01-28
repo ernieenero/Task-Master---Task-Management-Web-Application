@@ -137,6 +137,10 @@ nav ul li a {
         text-align: center;
         transition: all 0.5s;
     }
+    nav ul {
+        display: flex;
+        flex-direction: column;
+    }
     nav ul li {
         display: block;
         text-align: left;

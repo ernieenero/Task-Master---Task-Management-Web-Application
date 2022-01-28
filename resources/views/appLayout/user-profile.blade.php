@@ -4,14 +4,27 @@
 @ensection
 @section('content')
 
-<div id="user__profile" class="content">
-    <div class="user__card">
-        <h3 id="user__name">{{$user->name}}</h3>
-        <h3 id="user__email">{{$user->email}}</h3>
-        
-        <a href="{{route('edit', [Auth::user()->user_id])}}">Edit Profile</a>
-        <a href="">Deactivate Account</a>
+<div class="content">
+    <div class="pf-box"> 
+            <div class="inner-pf-box">
+                <img class="user__profile__img" src="{{asset('images/user.png')}}" alt="asdasd">
+            </div>
+            <div class="line-pf">
+                <h2 class="pf-username"><span>{{Auth::user()->name}}</span></h2>
+                <div class="pf-address row ">
+
+                    <div class="column">Email:<h4>{{Auth::user()->email}}</h4></div>
+                </div>
+
+                <div><a href="{{route('edit', Auth::user()->user_id)}}" class="edit__user">Update User</a></div>
+                <!-- <div><h6>Deactivate Account</h6></div> -->
+                <form class="logout-form" action="{{route('login.destroy')}}" method="post">
+                    @csrf
+                    <a class="pf-logout" href="{{route('login.destroy')}}" onclick="event.preventDefault(); this.closest('form').submit();"><h4><strong>LOGOUT</strong></h4></a>
+                </form>
+            </div>
+            
+
     </div>
-    
 </div>
 @endsection

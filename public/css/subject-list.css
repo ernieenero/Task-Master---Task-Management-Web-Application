@@ -71,9 +71,15 @@ img.profile {
 a.edit__subject img,
 a.delete__subject img {
     margin: 10px 30px;
-    height: 25px;
+    padding: 2px 5px;
+    height: 30px;
+    border-radius: 5px;
 }
-
+a.edit__subject img:hover,
+a.delete__subject img:hover {
+    background-image: linear-gradient(60deg, gray, white, gray);
+    padding: 3px 6px;
+}
 .subject__input[type="submit"]:hover {
     background-color: rgba(0, 0, 0, 0.2);
     color: white;

@@ -1,20 +1,50 @@
-body,
-html {
-    height: 100%;
-}
-body#us-page {
-    margin: 0;
-    padding: 0;
-}
-div.content {
-    display: inline-block;
-    position: relative;
-    animation: TransIn 0.5s;
-    justify-content: left;
-    text-align: left;
-}
-div.content > * {
+div.about__left {
     display: flex;
-    margin: 10px 15px;
-    padding: 10px 15px;
+    flex-direction: column;
+    width: 65%;
+    text-align: justify;
+    align-items: center;
+    margin: 30px 20px;
+    padding: 30px 20px;
+    line-height: 2;
+    background-image: linear-gradient(-120deg, #d3aa3e, #d3a93e00, #d3aa3e);
+    border-radius: 20px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+}
+hr {
+    border-top-color: gray;
+    width: 80%;
+    border-top-width: 2px;
+    border-top-style: groove;
+    border-right: none;
+    border-left: none;
+    border-bottom: none;
+    margin: 15px 5px;
+}
+
+div.about__right {
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+    text-align: justify;
+    align-items: center;
+    justify-content: center;
+    margin: 30px 20px;
+    padding: 30px 20px;
+    line-height: 2;
+    background-image: linear-gradient(120deg, #d3aa3e, #d3a93e00, #d3aa3e);
+    border-radius: 20px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+}
+.repo_img {
+    height: 35px;
+}
+.repo__about {
+    margin: 20px 10px;
+    padding: 20px;
+    line-height: 1.5;
+}
+h5 {
+    float: right;
+    margin: 10px 10px;
 }

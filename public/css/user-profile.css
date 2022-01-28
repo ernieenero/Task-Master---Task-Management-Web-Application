@@ -1,16 +1,69 @@
-#user__profile {
+.content {
     display: flex;
-    flex-direction: column;
-    width: 90%;
+    text-align: center;
+    justify-content: center;
+}
+
+.pf-box {
+    display: grid;
+    margin: 30px;
+    grid-template-rows: 210px 210px 80px;
+    border-radius: 18px;
+    background: #ece7d8;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+    font-family: roboto;
+    text-align: center;
+    width: 45em;
+}
+
+.inner-pf-box {
+    display: flex;
+    background-color: #f2ca63;
+    border-radius: 18px 18px 0px 0px;
+    box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.9);
+    margin: 10px 20px 0px;
+    /* height: 200px; */
+    width: 42.3em;
+}
+
+.line-pf {
+    background-color: #eeeee6;
+    border-radius: 0px 0px 10px 10px;
+    box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.9);
+    margin: 0px 20px;
+    height: 70px;
+    width: 42.3em;
+}
+
+.pf-username {
+    margin: 15px 10px 10px;
     text-align: center;
 }
-.user__card {
+
+.pf-address,
+.edit__user {
+    margin: 40px 80px 30px;
+    text-align: center;
+}
+.pf-logout h4,
+.edit__user {
+    color: #000;
+    margin: 20px 15px;
+    padding: 10px;
+}
+.pf-logout h4:hover,
+.edit__user:hover {
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.row {
     display: flex;
-    flex-direction: column;
 }
-#user__name::before {
-    content: "Username: ";
+
+.column {
+    flex: 50%;
 }
-#user__email::before {
-    content: "Email: ";
+.user__profile__img {
+    height: 150px;
+    margin: auto;
 }

@@ -74,9 +74,11 @@ class Subjects extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
-    {
-        //
+    public function edit($user_id, $subject_id)
+    {   
+        $user = User::find($user_id);
+        $subject = $user->subjects()->where('subject_id', $subject_id)->first();
+        return view('appLayout/subject-edit', compact('subject'));
     }
 
     /**
@@ -86,9 +88,19 @@ class Subjects extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $user_id, $subject_id)
     {
-        //
+        $data = $request->all();
+
+        $user = User::find($user_id);
+        $subject = $user->subjects()->where('subject_id', $subject_id)->first();
+
+        $subject->subject_name = $data['subject_name'];
+        $subject->subject_detail = $data['subject_detail'];
+
+        $subject->save();
+
+        return redirect()->route('user-home', ['id'=>$user_id]);
     }
 
     /**
@@ -97,8 +109,12 @@ class Subjects extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($user_id, $subject_id)
     {
-        //
+        $user = User::find($user_id);
+
+        $user->subjects()->where('subject_id', $subject_id)->delete();
+
+        return redirect()->route('user-home', ['id'=>$user_id]);
     }
 }
