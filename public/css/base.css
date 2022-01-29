@@ -315,16 +315,15 @@ div.content {
 div .right-col-base,
 div .left-col-base {
     display: flex;
-    flex-wrap: wrap;
-    position: relative;
-    top: 150px;
+    flex-direction: column;
     width: 50%;
     margin: 20px;
     padding: 10px 15px;
 }
 a.started__button {
+    display: inline-block;
     position: relative;
-    top: 120px;
+    top: 400px;
     background-color: #e5e5e5;
     border: 1px solid gray;
     border-radius: 15px;
@@ -337,4 +336,31 @@ a.started__button {
 a.started__button:hover {
     background-color: gray;
     color: white;
+}
+img.img__des {
+    height: 500px;
+    border-radius: 20px;
+    box-shadow: 2px 5px 15px rgba(0, 0, 0, 0.2);
+    animation: jump 2s infinite alternate;
+}
+
+@keyframes jump {
+    0% {
+        transform: translate(-0%, -5%) scale(1.05, 0.95);
+    }
+    50% {
+        transform: translate(-0%, -20%) rotate(-2deg);
+    }
+    55% {
+        transform: translate(-0%, -20%) rotate(2deg);
+    }
+    60% {
+        transform: translate(-0%, -20%) rotate(-2deg);
+    }
+    65% {
+        transform: translate(-0%, -20%) rotate(2deg);
+    }
+    100% {
+        transform: translate(-0%, -5%) scale(1.05, 0.95);
+    }
 }

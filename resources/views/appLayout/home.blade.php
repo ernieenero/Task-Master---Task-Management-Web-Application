@@ -8,7 +8,7 @@
 
 <div class="content">
 <div class="right-col-base">
-    <h1>Think of Design Here</h1>
+    <img class="img__des" src="{{ asset('images/home-page-des.jpg')}}" alt="">
     </div>
     <div class="left-col-base">
         
