@@ -19,8 +19,8 @@ Route::resource('/', 'Registration');
 
 Route::get('/create', [Registration::class, 'create'])->middleware(['guest'])->name('create');
 Route::get('/task_master/{id}', [Registration::class, 'show'])->middleware(['auth'])->name('profile');
-Route::get('/about', [Registration::class, 'about'])->middleware(['guest'])->name('about');
-Route::get('/us', [Registration::class, 'us'])->middleware(['guest'])->name('us');
+Route::get('/about', [Registration::class, 'about'])->name('about');
+Route::get('/us', [Registration::class, 'us'])->name('us');
 Route::get('/task_master/edit/{id}', [Registration::class, 'edit'])->middleware(['auth'])->name('edit');
 Route::post('/task_master/edit/{id}', [Registration::class, 'update'])->middleware(['auth'])->name('update');
 
