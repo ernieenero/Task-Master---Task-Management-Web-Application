@@ -53,3 +53,59 @@ hr {
 .title__login {
     margin-top: 15px;
 }
+@media only screen and (max-width: 600px) {
+    div.form-page {
+        display: flex;
+        flex-direction: column;
+        border: 1px solid black;
+        border-radius: 20px;
+        width: 100%;
+        margin: 80px auto;
+        padding: 0px 7px 15px 7px;
+        background-color: rgba(187, 187, 187, 0.46);
+        box-shadow: 2px 5px rgba(0, 0, 0, 0.2);
+        align-items: center;
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 10px;
+        padding: 5px;
+    }
+    input[name="submit"] {
+        border: 1px solid black;
+        width: 80px;
+        border-radius: 15px;
+        background-color: #e5e5e5;
+        color: rgba(52, 52, 52, 0.5);
+        cursor: pointer;
+        transition: 0.15s ease-in-out;
+    }
+    input,
+    select {
+        border-radius: 20px;
+        border: 1.5px solid gray;
+        margin: 10px;
+        padding: 4px 10px;
+    }
+
+    input[name="submit"]:hover {
+        background-color: gray;
+        color: white;
+        box-shadow: 2px 3px rgba(0, 0, 0, 0.2);
+    }
+    hr {
+        border-top-color: gray;
+        width: 200px;
+        border-top-width: 2px;
+        border-top-style: groove;
+        border-right: none;
+        border-left: none;
+        border-bottom: none;
+    }
+    .title__login {
+        margin-top: 15px;
+    }
+}

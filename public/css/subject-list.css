@@ -92,3 +92,102 @@ a.delete__subject img:hover {
     color: white;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.9);
 }
+@media only screen and (max-width: 600px) {
+    #subject-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin: 25px auto;
+        padding: 25px;
+        top: 170px;
+    }
+    form.subject__form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 5px 7px;
+        width: 100%;
+        margin: 10px;
+        background-color: #c4c4c4;
+        border-radius: 20px;
+        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+    }
+    input.subject__input {
+        margin: 10px 15px;
+        padding: 7px 10px;
+        width: 70%;
+        background-color: seashell;
+        border-radius: 20px;
+    }
+    input[type="submit"] {
+        width: 40%;
+        background-color: #f2ca63;
+        font-size: medium;
+        border-radius: 15px;
+        cursor: pointer;
+    }
+    a.user__profile__button {
+        position: absolute;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        left: 35%;
+        top: -20px;
+        font-size: smaller;
+    }
+
+    img.profile {
+        height: 25px;
+    }
+    .subject__list__content {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        margin: 40px 10px;
+    }
+    .subject__content {
+        margin: 10px auto;
+        padding: 10px 15px;
+        line-height: 2;
+        background-image: linear-gradient(60deg, gray, white, gray);
+        border-radius: 15px;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.9);
+        width: 40%;
+    }
+    .subject__name {
+        font-size: small;
+        font-weight: bold;
+        padding: 5px;
+        color: rgb(88, 88, 88);
+    }
+    .subject__name:hover {
+        text-shadow: 2px 2px 15px gray;
+    }
+    .subject__desc {
+        font-size: x-small;
+        color: rgba(88, 88, 88, 0.8);
+        margin-bottom: 10px;
+    }
+    a.edit__subject img,
+    a.delete__subject img {
+        margin: 5px;
+        padding: 2px;
+        height: 20px;
+        border-radius: 5px;
+        transition: 0.2s;
+    }
+    a.edit__subject img:hover,
+    a.delete__subject img:hover {
+        background-color: rgba(255, 255, 255, 0.9);
+        padding: 3px 6px;
+    }
+    .subject__input[type="submit"]:hover {
+        background-color: rgba(0, 0, 0, 0.2);
+        color: white;
+        box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.9);
+    }
+}

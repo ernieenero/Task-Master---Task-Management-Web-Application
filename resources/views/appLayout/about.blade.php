@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-<div class="content">
+<div id="about" class="content">
       <div class="about__left">
         <h1>Task Master About</h1>
         <hr>

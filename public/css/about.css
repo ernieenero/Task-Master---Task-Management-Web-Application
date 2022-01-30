@@ -48,3 +48,50 @@ h5 {
     float: right;
     margin: 10px 10px;
 }
+@media only screen and (max-width: 600px) {
+    #about {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    div.about__left {
+        text-align: justify;
+        align-items: center;
+        width: 100%;
+        margin: 15px 10px;
+        padding: 15px 20px;
+        line-height: 1.5;
+        font-size: x-small;
+        background-image: linear-gradient(-120deg, #d3aa3e, #d3a93e00, #d3aa3e);
+        border-radius: 20px;
+        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+    }
+    div.about__right {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        text-align: justify;
+        align-items: center;
+        justify-content: center;
+        margin: 30px 20px;
+        padding: 30px 20px;
+        font-size: x-small;
+        line-height: 1.5;
+        background-image: linear-gradient(120deg, #d3aa3e, #d3a93e00, #d3aa3e);
+        border-radius: 20px;
+        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+    }
+    .repo_img {
+        height: 35px;
+    }
+    .repo__about {
+        margin: 10px 5px;
+        padding: 10px;
+        line-height: 1;
+    }
+    h5 {
+        float: right;
+        margin: 5px 5px;
+    }
+}

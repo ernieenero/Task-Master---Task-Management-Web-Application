@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap");
 /* Navigation bar part */
 * {
     padding: 0;
@@ -6,6 +6,7 @@
     list-style: none;
     text-decoration: none;
     box-sizing: border-box;
+    font-family: "Mochiy Pop P One", sans-serif;
 }
 body,
 html {
@@ -48,8 +49,8 @@ nav {
     color: white;
 }
 a img.logo {
-    height: 120px;
-    margin: 0 40px;
+    height: 100px;
+    margin: 20px 40px;
     cursor: pointer;
     animation: logo-anim 3s ease-in forwards infinite alternate;
 }
@@ -99,7 +100,8 @@ nav ul li a {
 }
 @media only screen and (max-width: 952px) {
     a img.logo {
-        margin: 0 20px;
+        height: 80px;
+        margin: 20px;
     }
     nav ul li a {
         font-size: 15px;
@@ -107,43 +109,6 @@ nav ul li a {
     }
     ul {
         margin-right: 0px;
-    }
-}
-
-@media only screen and (max-width: 900px) {
-    .checkmo {
-        display: block;
-        margin: 20px;
-        animation: TransIn 0.5s;
-    }
-    ul {
-        position: fixed;
-        width: 100vw;
-        height: 100vh;
-        background-color: rgb(92, 87, 87);
-        right: -150%;
-        text-align: center;
-        transition: all 0.5s;
-    }
-    nav ul {
-        display: flex;
-        flex-direction: column;
-    }
-    nav ul li {
-        display: block;
-        text-align: left;
-    }
-    nav ul li a {
-        color: white;
-    }
-    .nav:hover {
-        background-color: rgb(227, 190, 41);
-        transition: 0.5s;
-        color: black;
-    }
-    #check:checked ~ ul {
-        top: 124px;
-        right: -80%;
     }
 }
 
@@ -199,5 +164,73 @@ img.img__des {
     }
     100% {
         transform: translate(-0%, -5%) scale(1.05, 0.95);
+    }
+}
+
+/* MOBILE VIEW */
+
+@media only screen and (max-width: 600px) {
+    div.content {
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        top: 200px;
+        width: 90%;
+        margin: auto;
+    }
+    .checkmo {
+        display: block;
+        margin: 20px;
+        animation: TransIn 0.5s;
+    }
+    ul {
+        position: fixed;
+        width: 450px;
+        height: 100%;
+        background-color: rgb(92, 87, 87);
+        right: -150%;
+        text-align: center;
+        transition: all 0.5s;
+    }
+    nav ul {
+        display: flex;
+        flex-direction: column;
+    }
+    nav ul li {
+        display: block;
+        text-align: left;
+    }
+    nav ul li a {
+        color: white;
+    }
+    .nav:hover {
+        background-color: rgb(227, 190, 41);
+        transition: 0.5s;
+        color: black;
+    }
+    #check:checked ~ ul {
+        top: 124px;
+        right: -80%;
+    }
+    img.img__des {
+        height: 250px;
+        width: 90%;
+        border-radius: 20px;
+        box-shadow: 2px 5px 15px rgba(0, 0, 0, 0.2);
+        animation: jump 2s infinite alternate;
+    }
+    a.started__button {
+        display: inline-block;
+        position: relative;
+        top: 150px;
+        background-color: #e5e5e5;
+        border: 1px solid gray;
+        border-radius: 7px;
+        padding: 5px 7px;
+        margin: 5px;
+        width: 6rem;
+        text-align: center;
+        font-size: x-small;
+        transition: 0.2s ease-in-out;
     }
 }

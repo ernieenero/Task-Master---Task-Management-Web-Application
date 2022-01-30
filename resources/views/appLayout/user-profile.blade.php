@@ -11,7 +11,8 @@
             </div>
             <div class="line-pf">
                 <h2 class="pf-username"><span>{{Auth::user()->name}}</span></h2>
-                <div class="pf-address row ">
+            </div>
+            <div class="pf-address row ">
 
                     <div class="column">Email:<h4>{{Auth::user()->email}}</h4></div>
                 </div>
@@ -22,7 +23,6 @@
                     @csrf
                     <a class="pf-logout" href="{{route('login.destroy')}}" onclick="event.preventDefault(); this.closest('form').submit();"><h4><strong>LOGOUT</strong></h4></a>
                 </form>
-            </div>
             
 
     </div>

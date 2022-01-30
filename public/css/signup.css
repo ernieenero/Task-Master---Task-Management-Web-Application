@@ -56,3 +56,63 @@ input[name="submit"]:hover {
 .form__title {
     margin-top: 20px;
 }
+@media only screen and (max-width: 600px) {
+    div.form-page {
+        display: flex;
+        flex-direction: column;
+        border: 1px solid black;
+        border-radius: 20px;
+        width: 100%;
+        margin: 50px auto;
+        padding: 0px 7px 15px 7px;
+        background-color: rgba(187, 187, 187, 0.46);
+        box-shadow: 2px 5px rgba(0, 0, 0, 0.2);
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        margin: 10px 15px;
+        padding: 10px;
+    }
+
+    form .right-col {
+        margin: 5px 15px;
+        padding: 5px 7px;
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        text-align: center;
+    }
+    input,
+    select {
+        border-radius: 20px;
+        border: 1.5px solid gray;
+        margin: 10px;
+        padding: 4px 10px;
+    }
+
+    input[name="submit"] {
+        border: 1px solid black;
+        border-radius: 10px;
+        background-color: #e5e5e5;
+        color: rgba(52, 52, 52, 0.5);
+        cursor: pointer;
+        transition: 0.15s ease-in-out;
+    }
+
+    input[name="submit"]:hover {
+        background-color: gray;
+        color: rgba(0, 0, 0, 1);
+        box-shadow: 2px 3px rgba(0, 0, 0, 0.2);
+    }
+    .form__title {
+        margin-top: 20px;
+    }
+}

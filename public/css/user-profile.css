@@ -5,15 +5,18 @@
 }
 
 .pf-box {
-    display: grid;
+    display: flex;
+    flex-direction: column;
     margin: 30px;
-    grid-template-rows: 210px 210px 80px;
     border-radius: 18px;
     background: #ece7d8;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
     font-family: roboto;
     text-align: center;
-    width: 45em;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .inner-pf-box {
@@ -22,8 +25,7 @@
     border-radius: 18px 18px 0px 0px;
     box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.9);
     margin: 10px 20px 0px;
-    /* height: 200px; */
-    width: 42.3em;
+    width: 95%;
 }
 
 .line-pf {
@@ -31,8 +33,7 @@
     border-radius: 0px 0px 10px 10px;
     box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.9);
     margin: 0px 20px;
-    height: 70px;
-    width: 42.3em;
+    width: 95%;
 }
 
 .pf-username {
@@ -58,12 +59,60 @@
 
 .row {
     display: flex;
+    flex-direction: column;
 }
 
-.column {
-    flex: 50%;
-}
 .user__profile__img {
     height: 150px;
     margin: auto;
+}
+@media only screen and (max-width: 600px) {
+    .pf-box {
+        margin: 15px;
+        padding: 10px;
+        width: 100%;
+    }
+
+    .inner-pf-box {
+        padding: 10px;
+    }
+
+    .line-pf {
+        background-color: #eeeee6;
+        border-radius: 0px 0px 10px 10px;
+        box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.9);
+        margin: 0px 20px;
+        width: 95%;
+    }
+
+    .pf-username {
+        margin: 15px 10px 10px;
+        text-align: center;
+    }
+
+    .pf-address,
+    .edit__user {
+        margin: 40px 80px 30px;
+        text-align: center;
+    }
+    .pf-logout h4,
+    .edit__user {
+        color: #000;
+        margin: 20px 15px;
+        padding: 10px;
+    }
+    .pf-logout h4:hover,
+    .edit__user:hover {
+        color: rgba(0, 0, 0, 0.7);
+    }
+
+    .row {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .user__profile__img {
+        height: 100px;
+        margin: auto;
+    }
 }
