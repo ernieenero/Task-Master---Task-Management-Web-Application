@@ -27,7 +27,7 @@
             <h4 class="due__date">{{$task->task_deadline}}</h4>
             <div class="action">
               <a href="{{route('edit-task', [Auth::user()->user_id, $subject_id, $task->task_id])}}"><img class="task-list-img" src="{{asset('images/edit.png')}}" alt=""></a>
-              <a href="{{route('delete-task', [Auth::user()->user_id, $subject_id, $task->task_id])}}"><img class="task-list-img" src="{{asset('images/another (1).png')}}" alt=""></a>
+              <a href="{{route('delete-task', [Auth::user()->user_id, $subject_id, $task->task_id])}}" onclick="return confirm('You Want To Delete Task: {{$task->task_name}}')"><img class="task-list-img" src="{{asset('images/another (1).png')}}" alt=""></a>
             </div>
             </div>
             

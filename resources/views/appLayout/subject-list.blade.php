@@ -22,7 +22,7 @@
                     <h3 class="subject__desc">{{$subject->subject_detail}}</h3>
     
                     <a class="edit__subject" href="{{route('subject.edit', [Auth::user()->user_id, $subject->subject_id])}}"><img src="{{asset('images/pen.png')}}" alt=""></a>
-                    <a class="delete__subject" onclick="" href="{{route('subject.destroy', [Auth::user()->user_id, $subject->subject_id])}}"><img src="{{asset('images/trash.png')}}" alt=""></a>
+                    <a class="delete__subject" onclick="return confirm('You Want To Delete Subject: {{$subject->subject_name}}')" href="{{route('subject.destroy', [Auth::user()->user_id, $subject->subject_id])}}"><img src="{{asset('images/trash.png')}}" alt=""></a>
                 </div>
             </div>
             @endforeach
