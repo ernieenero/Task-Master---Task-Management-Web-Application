@@ -97,7 +97,7 @@ nav ul li a {
 #check {
     display: none;
 }
-@media (max-width: 952px) {
+@media only screen and (max-width: 952px) {
     a img.logo {
         margin: 0 20px;
     }
@@ -110,7 +110,7 @@ nav ul li a {
     }
 }
 
-@media (max-width: 670px) {
+@media only screen and (max-width: 900px) {
     .checkmo {
         display: block;
         margin: 20px;
