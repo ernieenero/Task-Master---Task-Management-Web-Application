@@ -14,4 +14,8 @@ class Subject extends Model
         'subject_name',
         'subject_detail'
     ];
+
+    public function tasks(){
+        return $this->hasMany('App\Models\Task', 'subject_id');
+    }
 }

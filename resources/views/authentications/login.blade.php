@@ -2,7 +2,13 @@
 @section('cssLinks')
     <link rel="stylesheet" href="{{ asset('css/login.css') }}">
 @endsection
-
+@section('cancelBtn')
+@if(Auth::user() == null)
+      <a href="{{route('index')}}" class="cancel__button">Cancel</a>
+      @else
+      <a href="{{route('/')}}" class="cancel__button">Cancel</a>
+      @endif
+@endsection
 @section('content')
 
 <div class="content">

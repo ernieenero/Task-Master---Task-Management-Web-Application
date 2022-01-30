@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     @yield('cssLinks')
-    <link rel="stylesheet" href="{{ asset('/css/base.css') }}">
+    <link rel="stylesheet" href="{{ asset('/css/nav.css') }}">
     <link rel="icon" href="{{asset('images/webicon.ico')}}" type="image/icon type">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>To Do List</title>

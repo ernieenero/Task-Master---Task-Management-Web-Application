@@ -12,7 +12,7 @@ rightSlide.addEventListener('click',  slideRight);
 leftSlide.addEventListener('click', slideLeft);
 
 
-setInterval(autoSlides, 5000);
+// setInterval(autoSlides, 5000);
 
 function autoSlides(){
     if(start > 6 ){ start = 0}

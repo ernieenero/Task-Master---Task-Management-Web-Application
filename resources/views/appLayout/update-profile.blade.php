@@ -16,6 +16,13 @@
     <link rel="stylesheet" href="{{ asset('css/signup.css') }}">
 @endsection
 
+@section('cancelBtn')
+@if(Auth::user() == null)
+      <a href="{{route('index')}}" class="cancel__button">Cancel</a>
+      @else
+      <a href="{{route('profile', Auth::user()->user_id)}}" class="cancel__button">Cancel</a>
+      @endif
+@endsection
 @section('content')
 <div class="content">
     <div class="form-page">

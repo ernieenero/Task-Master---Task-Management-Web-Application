@@ -18,11 +18,11 @@
         @foreach($user->subjects as $subject)
             <div class="subject__content">
                 <div class="card__content">
-                    <h2 class="subject__name">{{$subject->subject_name}}</h2>
+                    <a href="{{route('task-home', [Auth::user()->user_id, $subject->subject_id])}}" class="subject__name">{{$subject->subject_name}}</a>
                     <h3 class="subject__desc">{{$subject->subject_detail}}</h3>
     
                     <a class="edit__subject" href="{{route('subject.edit', [Auth::user()->user_id, $subject->subject_id])}}"><img src="{{asset('images/pen.png')}}" alt=""></a>
-                    <a class="delete__subject" onclick="return confirm('Are you sure to delete Subject: {{$subject->subject_name}}')" href="{{route('subject.destroy', [Auth::user()->user_id, $subject->subject_id])}}"><img src="{{asset('images/trash.png')}}" alt=""></a>
+                    <a class="delete__subject" onclick="" href="{{route('subject.destroy', [Auth::user()->user_id, $subject->subject_id])}}"><img src="{{asset('images/trash.png')}}" alt=""></a>
                 </div>
             </div>
             @endforeach
@@ -30,3 +30,4 @@
     </div>
 </div>
 @endsection
+

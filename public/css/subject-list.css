@@ -62,11 +62,16 @@ img.profile {
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.9);
 }
 .subject__name {
-    font-size: x-large;
-    font-weight: 5px;
+    font-size: xx-large;
+    font-weight: bold;
+    padding: 5px;
+    color: rgb(88, 88, 88);
+}
+.subject__name:hover {
+    text-shadow: 2px 2px 15px gray;
 }
 .subject__desc {
-    color: gray;
+    color: rgb(88, 88, 88);
     margin-bottom: 10px;
 }
 a.edit__subject img,
