@@ -6,7 +6,7 @@
 <div id="subject-list" class="content">
     <a class="user__profile__button" href="{{route('profile', ['id'=>Auth::user()->user_id])}}"><img class="profile" src="{{asset('images/user.png') }}" alt=""><span><h3 style="color: black;">{{Auth::user()->name}}</h3></span></a>
     
-    <h1>Task Master</h1>
+    <h1 style="font-size: xx-large;">Task Master</h1>
     <form class="subject__form" method="post" action="{{route('subject.store', Auth::user()->user_id)}}">
         {{csrf_field()}}
             <input class="subject__input" type="text" name='subject_name' placeholder="Enter Subject Name">

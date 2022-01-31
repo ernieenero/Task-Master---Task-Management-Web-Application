@@ -101,6 +101,10 @@ a.delete__subject img:hover {
         margin: 25px auto;
         padding: 25px;
         top: 170px;
+        font-size: xx-small;
+    }
+    h1 {
+        font-size: x-large;
     }
     form.subject__form {
         display: flex;
@@ -112,6 +116,7 @@ a.delete__subject img:hover {
         background-color: #c4c4c4;
         border-radius: 20px;
         box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+        font-size: xx-small;
     }
     input.subject__input {
         margin: 10px 15px;
@@ -119,21 +124,18 @@ a.delete__subject img:hover {
         width: 70%;
         background-color: seashell;
         border-radius: 20px;
+        font-size: small;
     }
     input[type="submit"] {
         width: 40%;
         background-color: #f2ca63;
-        font-size: medium;
+        font-size: small;
         border-radius: 15px;
         cursor: pointer;
     }
     a.user__profile__button {
-        position: absolute;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
         left: 35%;
-        top: -20px;
+        top: -60px;
         font-size: smaller;
     }
 

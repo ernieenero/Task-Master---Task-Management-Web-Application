@@ -5,6 +5,9 @@
     justify-content: center;
     margin: 10px 15px;
 }
+.Title {
+    font-size: x-large;
+}
 .left-col {
     background-color: #d3aa3e;
     display: flex;
@@ -46,6 +49,7 @@
 .fields > *,
 .fields-content > * {
     width: 25%;
+    font-size: small;
 }
 
 .add__task {
@@ -55,6 +59,7 @@
     width: 60px;
     border-radius: 10px;
     color: black;
+    font-size: small;
 }
 .add__task:hover {
     padding: 9px;
@@ -77,7 +82,20 @@
     margin: 0 10px;
     padding: 1px;
 }
+div.action {
+    margin: auto;
+}
+
 @media only screen and (max-width: 600px) {
+    .Title {
+        font-size: large;
+    }
+    .fields > * {
+        font-size: smaller;
+    }
+    .fields-content > * {
+        font-size: smaller;
+    }
     .inner {
         display: flex;
         flex-direction: column;
@@ -120,5 +138,8 @@
         align-items: center;
         text-align: center;
         margin: auto;
+    }
+    .add__task {
+        font-size: smaller;
     }
 }

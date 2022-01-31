@@ -7,11 +7,6 @@
         form.edit {
             margin: 10px 15px;
         }
-        #edit__button {
-            position: absolute;
-            top: 270px;
-            width: 90px;   
-        }
     </style>
     <link rel="stylesheet" href="{{ asset('css/signup.css') }}">
 @endsection

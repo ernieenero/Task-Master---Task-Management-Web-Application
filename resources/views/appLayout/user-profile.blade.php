@@ -1,7 +1,7 @@
 @extends('templates/base')
 @section('cssLinks')
     <link rel="stylesheet" href="{{asset('css/user-profile.css') }}">
-@ensection
+@endsection
 @section('content')
 
 <div class="content">

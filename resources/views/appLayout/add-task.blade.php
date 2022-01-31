@@ -21,7 +21,7 @@
                     </ul>
                 </div>
             @endif
-            <h2>Create New Task</h2>
+            <h2 style="font-size: x-large;">Create New Task</h2>
         <form method="post" action="{{route('store-task', [Auth::user()->user_id, $subject_id])}}">
             {{csrf_field()}}
             <input type="text" name="task_name" placeholder="Task Name">

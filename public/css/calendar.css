@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap");
 div.calendar {
-    width: 15rem;
+    width: 19rem;
     background-color: black;
     box-shadow: 4px 4px 15px rgba(0, 0, 0, 1);
     transition: 0.5s ease-in-out;
@@ -43,7 +43,7 @@ div.days {
 }
 div.days div {
     display: flex;
-    width: calc(15rem / 7);
+    width: calc(19rem / 7);
     justify-content: space-between;
     padding: 5px 7px;
 }
@@ -57,7 +57,7 @@ div.num-date {
 
 div.num-date div {
     display: flex;
-    width: calc(14rem / 7);
+    width: calc(18rem / 7);
     height: 2rem;
     padding: 0.5rem;
     cursor: pointer;

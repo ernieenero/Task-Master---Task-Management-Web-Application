@@ -27,6 +27,11 @@
         color: white;
         box-shadow: 2px 3px rgba(255, 255, 255, 0.8)
       }
+      @media only screen and (max-width: 600px) {
+        .cancel__button {
+        font-size: x-small;
+      }
+      }
     </style>
   </head>
   <body id="main-page">

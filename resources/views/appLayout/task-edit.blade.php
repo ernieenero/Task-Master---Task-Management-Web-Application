@@ -21,7 +21,7 @@
                     </ul>
                 </div>
             @endif
-            <h2>Create New Task</h2>
+            <h2 style="font-size: x-large;">Edit Task</h2>
         <form method="post" action="{{route('update-task', [Auth::user()->user_id, $subject_id, $task->task_id])}}">
             {{csrf_field()}}
             <input type="text" name="task_name" value="{{$task->task_name}}">
