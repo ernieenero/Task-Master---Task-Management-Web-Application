@@ -75,6 +75,9 @@ hr {
         margin: 10px;
         padding: 5px;
     }
+    form > * {
+        width: 80%;
+    }
     input[name="submit"] {
         border: 1px solid black;
         width: 80px;

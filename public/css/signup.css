@@ -92,7 +92,7 @@ input[name="submit"]:hover {
         text-align: center;
     }
     form > * {
-        width: 50%;
+        width: 70%;
     }
     input,
     select {
@@ -109,7 +109,7 @@ input[name="submit"]:hover {
         color: rgba(52, 52, 52, 0.5);
         cursor: pointer;
         transition: 0.15s ease-in-out;
-        width: 70%;
+        width: 40%;
     }
 
     input[name="submit"]:hover {

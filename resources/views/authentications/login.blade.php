@@ -1,6 +1,6 @@
 @extends('templates.formTemp')
 @section('cssLinks')
-    <link rel="stylesheet" href="{{ asset('css/signup.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/login.css') }}">
 @endsection
 @section('cancelBtn')
 @if(Auth::user() == null)
@@ -22,7 +22,7 @@
                     </ul>
                 </div>
             @endif
-            <h1 class="form__title">Login Moto</h1>
+            <h1 class="title__login">Login Moto</h1>
    <form action="{{route('login.store')}}" method='post'>
         {{csrf_field()}}
         <label for="email">Email </label>
