@@ -22,7 +22,7 @@
                     </ul>
                 </div>
             @endif
-            <h1 class="form__title">Login</h1>
+            <h1 class="form__title">Login Moto</h1>
    <form action="{{route('login.store')}}" method='post'>
         {{csrf_field()}}
         <label for="email">Email </label>
