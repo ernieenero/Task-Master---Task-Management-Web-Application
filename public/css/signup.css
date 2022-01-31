@@ -28,7 +28,7 @@ form .right-col {
     padding: 5px 7px;
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 80%;
     text-align: center;
 }
 input,
@@ -88,8 +88,11 @@ input[name="submit"]:hover {
         padding: 5px 7px;
         display: flex;
         flex-direction: column;
-        width: 80%;
+        width: 100%;
         text-align: center;
+    }
+    form > * {
+        width: 50%;
     }
     input,
     select {
@@ -106,6 +109,7 @@ input[name="submit"]:hover {
         color: rgba(52, 52, 52, 0.5);
         cursor: pointer;
         transition: 0.15s ease-in-out;
+        width: 70%;
     }
 
     input[name="submit"]:hover {
