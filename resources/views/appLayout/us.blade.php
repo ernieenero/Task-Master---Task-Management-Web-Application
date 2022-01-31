@@ -16,7 +16,7 @@
         </div>
         <div class="card fade">
           <div class="img_frame">
-            <img class="us__img" src="{{asset('images/devs_img/tabellona.png') }}" alt="your image here">
+            <img class="us__img" src="{{asset('images/devs_img/lanon.jpg') }}" alt="your image here">
           </div>
           <h4>Name: Kimberly Lanon</h4>
           <h4>Section: BSIS-NS-3D</h4>
@@ -41,7 +41,7 @@
         </div>
         <div class="card fade">
         <div class="img_frame">
-            <img class="us__img" src="{{asset('images/devs_img/tabellona.png') }}" alt="your image here">
+            <img class="us__img" src="{{asset('images/devs_img/balderas.jpg') }}" alt="your image here">
           </div>
           <h4>Name: John Roland Balderas</h4>
           <h4>Section: BSIS-NS-3D</h4>
