@@ -10,7 +10,7 @@
           <div class="img_frame">
             <img class="us__img" src="{{asset('images/devs_img/tabellona.png') }}" alt="your image here">
           </div>
-          <h4>Name: Zander Tabelona</h4>
+          <h3 class="name">Zander Tabelona</h3>
           <h4>Section: BSIS-NS-3C</h4>
           <h4>Status: Student</h4>
         </div>
@@ -18,15 +18,15 @@
           <div class="img_frame">
             <img class="us__img" src="{{asset('images/devs_img/lanon.jpg') }}" alt="your image here">
           </div>
-          <h4>Name: Kimberly Lanon</h4>
+          <h3 class="name">Kimberly Lanon</h3>
           <h4>Section: BSIS-NS-3D</h4>
           <h4>Status: Student</h4>
         </div>
         <div class="card fade">
-        <div class="img_frame">
+          <div class="img_frame">
             <img class="us__img" src="{{asset('images/devs_img/jessel.jpg') }}" alt="your image here">
           </div>
-          <h4>Name: Ma. Jessel Quijano</h4>
+          <h3 class="name">Ma. Jessel Quijano</h3>
           <h4>Section: BSIS-NS-3C</h4>
           <h4>Status: Student</h4>
         </div>
@@ -35,7 +35,7 @@
         <div class="img_frame">
             <img class="us__img" src="{{asset('images/devs_img/castillo.jpg') }}" alt="your image here">
           </div>
-          <h4>Name: Angelica Castillo</h4>
+          <h3 class="name">Angelica Castillo</h4>
           <h4>Section: BSIS-NS-3C</h4>
           <h4>Status: Student</h4>
         </div>
@@ -43,7 +43,7 @@
         <div class="img_frame">
             <img class="us__img" src="{{asset('images/devs_img/balderas.jpg') }}" alt="your image here">
           </div>
-          <h4>Name: John Roland Balderas</h4>
+          <h3 class="name">John Roland Balderas</h3>
           <h4>Section: BSIS-NS-3D</h4>
           <h4>Status: Student</h4>
         </div>
@@ -51,7 +51,7 @@
         <div class="img_frame">
             <img class="us__img" src="{{asset('images/devs_img/enero.jpg') }}" alt="your image here">
           </div>
-          <h4>Name: Enesto Enero</h4>
+          <h3 class="name">Enesto Enero</h3>
           <h4>Section: BSIS-NS-3D</h4>
           <h4>Status: Student</h4>
         </div>
@@ -59,7 +59,7 @@
         <div class="img_frame">
             <img class="us__img" src="{{asset('images/devs_img/renald.jpg') }}" alt="your image here">
           </div>
-          <h4>Name: Renald Fernandez</h4>
+          <h3 class="name">Renald Fernandez</h3>
           <h4>Section: BSIS-NS-3D</h4>
           <h4>Status: Student</h4>
         </div>

@@ -3,7 +3,7 @@ const rightSlide = document.querySelector('a.next');
 const leftSlide = document.querySelector('a.prev');
 const circles = document.querySelectorAll('span.circle');
 
-let start = 1;
+let start = -1;
 
 slideRight();
 updateCircle(start);
@@ -12,7 +12,7 @@ rightSlide.addEventListener('click',  slideRight);
 leftSlide.addEventListener('click', slideLeft);
 
 
-setInterval(autoSlides, 5000);
+setInterval(autoSlides, 100000);
 
 function autoSlides(){
     if(start > 6 ){ start = 0}
@@ -43,8 +43,6 @@ function slidesReset(){
 function slideRight(){
     if(start < 7 ){
         start++;
-    }else{
-        start = 0;
     }
     showSlides();
     updateCircle(start);

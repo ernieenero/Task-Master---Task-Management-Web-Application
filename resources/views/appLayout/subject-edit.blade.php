@@ -6,6 +6,11 @@
         }
         form.edit {
             margin: 10px 15px;
+            width: 70%;
+        }
+        .right-col label{
+           text-align: left;
+           font-size: small;
         }
     </style>
     <link rel="stylesheet" href="{{ asset('css/signup.css') }}">
@@ -24,8 +29,10 @@
             <form class="edit" action="{{route('subject.update', [Auth::user()->user_id, $subject->subject_id])}}" method="post">
                 {{csrf_field()}}
                 <div class="right-col">
-                <input type="text" name="subject_name" value="{{$subject->subject_name}}" required>
-                <input type="text" name="subject_detail" value="{{$subject->subject_detail}}" required>
+                    <label for="subject_name">Subject Name</label>
+                    <input type="text" name="subject_name" value="{{$subject->subject_name}}" required>
+                    <label for="subject_detail">Subject Detail</label>
+                    <input type="text" name="subject_detail" value="{{$subject->subject_detail}}" required>
                 </div>
                 
 

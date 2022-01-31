@@ -24,8 +24,11 @@
             <h2 style="font-size: x-large;">Edit Task</h2>
         <form method="post" action="{{route('update-task', [Auth::user()->user_id, $subject_id, $task->task_id])}}">
             {{csrf_field()}}
+            <label for="task_name">Task Name</label>
             <input type="text" name="task_name" value="{{$task->task_name}}">
+            <label for="task_detail">Task Detail</label>
             <input type="text" name="task_detail" value="{{$task->task_detail}}">
+            <label for="task_deadline">Task Deadline</label>
             <input type="date" name="task_deadline" value="{{$task->task_deadline}}">
 
             <input type="submit" name="submit" value="Edit">

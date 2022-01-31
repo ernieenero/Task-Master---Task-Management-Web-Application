@@ -11,6 +11,9 @@ div.about__left {
     border-radius: 20px;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
 }
+.about-title {
+    font-size: x-large;
+}
 hr {
     border-top-color: gray;
     width: 80%;
@@ -42,7 +45,7 @@ div.about__right {
 .repo__about {
     margin: 20px 10px;
     padding: 20px;
-    line-height: 1.5;
+    line-height: 1;
 }
 h5 {
     float: right;

@@ -24,8 +24,11 @@
             <h2 style="font-size: x-large;">Create New Task</h2>
         <form method="post" action="{{route('store-task', [Auth::user()->user_id, $subject_id])}}">
             {{csrf_field()}}
+            <label for="task_name">Task Name</label>
             <input type="text" name="task_name" placeholder="Task Name">
+            <label for="task_detail">Task Detail</label>
             <input type="text" name="task_detail" placeholder="Task Detail">
+            <label for="task_deadline">Task Deadline</label>
             <input type="date" name="task_deadline">
 
             <input type="submit" name="submit" value="Create">

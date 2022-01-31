@@ -7,7 +7,7 @@
 @section('content')
 <div id="about" class="content">
       <div class="about__left">
-        <h1>Task Master About</h1>
+        <h1 class="about-title">Task Master About</h1>
         <hr>
         <p>To-do lists can be a great way to prioritize the tasks you need to accomplish, and to think about the time it'll take to do so. As great as a to-do list can be, though, we don't all think about things in the same way, and what works for you in terms of prioritization, and how you proceed through your list, may not work for someone else.
           Having a to-do list seems like living your life according to a rigid system that turns you into a half-robot. If you’re the sort of person who can’t stand having an unfinished item on your to-do list, this could put you off. In reality, to-do lists give you more flexibility. Consider this: 
