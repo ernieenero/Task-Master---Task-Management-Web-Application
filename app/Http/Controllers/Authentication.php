@@ -27,14 +27,16 @@ class Authentication extends Controller
             'password' => ['required'],
         ]);
         $user = $credentials['email'];
-        $user = User::where('email', $user)->first();
-
-        if (Auth::attempt($credentials)) {
-            $request->session()->regenerate();
-
-            return redirect(route('user-home', $user->user_id));
+        $user = User::where('email', $user)->where('account_status', 'Active')->first();
+        if($user){
+            if (Auth::attempt($credentials)) {
+                $request->session()->regenerate();
+    
+                return redirect(route('user-home', $user->user_id));
+            }
         }
         return redirect()->route('login.create')->withErrors(['login_error'=>'Incorrect Email or Password']);
+        
     }
         
 
@@ -47,5 +49,21 @@ class Authentication extends Controller
         $request->session()->regenerateToken();
 
         return redirect('/');
+    }
+    public function deactivate(Request $request, $id){
+        $user = User::find($id);
+
+        $user->account_status = "Deactivate";
+
+        $user->save();
+        
+        Auth::guard('web')->logout();
+
+        $request->session()->invalidate();
+
+        $request->session()->regenerateToken();
+
+        return redirect('/');
+
     }
 }

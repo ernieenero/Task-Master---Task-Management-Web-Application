@@ -26,9 +26,11 @@ Route::get('/task_master/edit/{id}', [Registration::class, 'edit'])->middleware(
 Route::post('/task_master/edit/{id}', [Registration::class, 'update'])->middleware(['auth'])->name('update');
 
 
+
 Route::get('/login', [Authentication::class, 'create'])->middleware(['guest'])->name('login.create');
 Route::post('/login', [Authentication::class, 'store'])->name('login.store');
 Route::post('/login/destroy', [Authentication::class, 'destroy'])->middleware('auth')->name('login.destroy');
+Route::post('/task_master/deactivate/{id}', [Authentication::class, 'deactivate'])->middleware(['auth'])->name('deactivate');
 
 Route::get('/task-master/{id}', [Subjects::class, 'create'])->middleware('auth')->name('user-home');
 Route::post('/task-master/{id}', [Subjects::class, 'store'])->middleware('auth')->name('subject.store');

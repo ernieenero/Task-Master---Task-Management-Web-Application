@@ -5,7 +5,7 @@
     width: 100%;
     margin: 50px auto;
     padding: 50px;
-    top: 100px;
+    top: 80px;
 }
 form.subject__form {
     display: flex;
@@ -33,12 +33,12 @@ input[type="submit"] {
     cursor: pointer;
 }
 a.user__profile__button {
-    position: absolute;
+    position: relative;
+    right: 45%;
     align-items: center;
     justify-content: center;
     text-align: center;
-    left: 30px;
-    top: 0;
+    margin: 0px 15px 30px 15px;
 }
 
 img.profile {
@@ -100,7 +100,7 @@ a.delete__subject img:hover {
         width: 100%;
         margin: 25px auto;
         padding: 25px;
-        top: 170px;
+        top: 120px;
         font-size: xx-small;
     }
     h1 {
@@ -134,9 +134,8 @@ a.delete__subject img:hover {
         cursor: pointer;
     }
     a.user__profile__button {
-        left: 35%;
-        top: -60px;
-        font-size: smaller;
+        position: relative;
+        right: 0%;
     }
 
     img.profile {
